@@ -1,0 +1,8 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://rishabhagrawal1.github.io
+title: Rishabh Agrawal
+tagline: A log of everyday life
+description: My experiences 
+paginate: 5

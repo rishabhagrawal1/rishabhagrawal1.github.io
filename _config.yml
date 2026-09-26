@@ -1,8 +1,16 @@
-excerpt_separator: ""
-pygments: true
-markdown: kramdown
-url: http://rishabhagrawal1.github.io
 title: Rishabh Agrawal
-tagline: A log of everyday life
-description: My experiences 
-paginate: 5
+description: Senior Engineer, AI at AWS
+url: https://rishabhagrawal1.github.io
+exclude:
+  - _posts
+  - _layouts
+  - _includes
+  - public
+  - atom.xml
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby

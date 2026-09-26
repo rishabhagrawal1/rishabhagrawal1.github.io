@@ -1,37 +1,123 @@
----
-layout: default
-title: Home
----
+<!doctype html>
+<html lang="en">
+<head>
+  <script>
+    const analyticsId = "G-HHCKLB49MD";
+    if (/^G-[A-Z0-9]+$/.test(analyticsId)) {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", analyticsId);
+      const googleTag = document.createElement("script");
+      googleTag.async = true;
+      googleTag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(analyticsId);
+      document.head.appendChild(googleTag);
+    }
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rishabh Agrawal, Senior Engineer, AI at AWS. Work in model customization, recommendation systems, and efficient model adaptation.">
+  <title>Rishabh Agrawal</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: #262b31; font: 16px/1.66 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    a { color: #245b82; text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid #245b82; outline-offset: 3px; }
+    .page { max-width: 790px; margin: 0 auto; padding: 50px 30px 85px; }
+    header { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid #e3e6e8; padding-bottom: 18px; }
+    .name { color: #24292d; font-size: 20px; font-weight: 700; letter-spacing: -.025em; margin: 0; }
+    .name a { color: inherit; }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; }
+    .intro { padding: 41px 0 8px; }
+    h1 { font-size: 30px; line-height: 1.25; letter-spacing: -.03em; margin: 0 0 14px; }
+    .affiliation { color: #616a71; margin: 0 0 8px; font-size: 15px; }
+    p { margin: 0 0 16px; }
+    .intro p { max-width: 710px; }
+    .intro p:last-child { margin-bottom: 0; }
+    section { padding-top: 23px; margin-top: 24px; border-top: 1px solid #e3e6e8; scroll-margin-top: 20px; }
+    .intro + section { margin-top: 12px; padding-top: 18px; }
+    h2 { font-size: 20px; letter-spacing: -.02em; margin: 0 0 16px; }
+    ul { padding-left: 22px; margin: 0; }
+    li { padding-left: 3px; margin: 0 0 12px; }
+    li::marker { color: #a0a9af; }
+    .entry { margin-bottom: 21px; }
+    .entry:last-child { margin-bottom: 0; }
+    .entry-title { font-weight: 650; }
+    .group-title { font-size: 18px; line-height: 1.4; margin: 0; }
+    .publication { margin-top: 11px; }
+    .publication-title { font-size: 15px; font-weight: 600; line-height: 1.5; }
+    .entry p { font-size: 15px; color: #48515a; margin: 3px 0 0; }
+    .entry p.related { font-size: 13px; color: #68737c; margin-top: 7px; }
+    .authors { font-size: 14px; margin-top: 2px; }
+    .meta { color: #68737c; font-size: 14px; }
+    .related-reports { margin-top: 7px; }
+    .small { font-size: 14px; color: #5c666e; }
+    @media (max-width: 600px) {
+      .page { padding: 27px 22px 60px; }
+      header { display: block; }
+      nav { margin-top: 10px; gap: 8px 16px; }
+      .intro { padding-top: 32px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1 class="name"><a href="#top">Rishabh Agrawal</a></h1>
+      <nav aria-label="Profiles">
+        <a href="https://scholar.google.com/citations?user=1It8NHgAAAAJ">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/rishagrawal">LinkedIn</a>
+        <a href="https://github.com/rishabhagrawal1">GitHub</a>
+      </nav>
+    </header>
+    <main id="top">
+      <div class="intro">
+        <p class="affiliation">Senior Engineer, AI · Amazon Web Services</p>
+        <p>I develop AI systems at AWS. My earlier work includes model customization for Amazon Bedrock and recommendation systems for Amazon Personalize.</p>
+        <p>My current interests include post-training and inference at scale for foundation and custom models, as well as recommendation and search systems.</p>
+      </div>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+      <section id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+        <div class="entry">
+          <h3 class="entry-title group-title">Model adaptation for expanding vocabularies</h3>
+          <p>Examines how joint training degrades existing item and token embeddings while new entries are still learning.</p>
+          <div class="publication"><div class="publication-title">Base Items Overfit, New Items Underfit: Hidden Cost of Joint Training in Incremental Adaptation</div><div class="authors">Rishabh Agrawal</div><div class="meta">NeurIPS 2026</div></div>
+          <div class="publication"><div class="publication-title"><a href="https://openreview.net/forum?id=56pM60sy24">Low-Rank Embedding Adaptation for Models with Expanding Vocabularies</a></div><div class="authors">Rishabh Agrawal</div><div class="meta">ICML 2026 CoLoRAI workshop</div></div>
+        </div>
+        <div class="entry">
+          <h3 class="entry-title group-title">Amazon Nova foundation model reports</h3>
+          <div class="publication"><div class="publication-title"><a href="https://arxiv.org/abs/2506.12103">The Amazon Nova family of models: Technical report and model card</a></div><div class="meta">Amazon Technical Reports, 2024 · Contributor</div></div>
+          <div class="meta related-reports"><a href="https://www.amazon.science/publications/amazon-nova-premier-technical-report-and-model-card">Nova Premier addendum</a> (2025) · <a href="https://www.amazon.science/publications/amazon-nova-2-multimodal-reasoning-and-generation-models">Nova 2 technical report</a> (2025)</div>
+        </div>
+      </section>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+      <section id="work" aria-labelledby="work-title">
+        <h2 id="work-title">Selected work</h2>
+        <div class="entry"><div class="entry-title">Amazon Bedrock · Model customization and hosting</div><p>Primary architect for custom model deployment and technical lead for custom model import.</p><p class="related">Coauthored AWS blog: <a href="https://aws.amazon.com/blogs/machine-learning/implementing-on-demand-deployment-with-customized-amazon-nova-models-on-amazon-bedrock/">custom model on-demand deployment</a> · Other launch posts: <a href="https://aws.amazon.com/blogs/aws/build-faster-more-cost-efficient-highly-accurate-models-with-amazon-bedrock-model-distillation-preview/">Model Distillation</a> · <a href="https://aws.amazon.com/blogs/aws/improve-model-accuracy-with-reinforcement-fine-tuning-in-amazon-bedrock/">reinforcement fine-tuning</a>.</p></div>
+        <div class="entry"><div class="entry-title">Amazon Personalize · Recommendation systems</div><p>Led development of new recommendation recipes that support larger item catalogs with lower inference latency.</p><p class="related">Coauthored AWS blogs: <a href="https://aws.amazon.com/blogs/machine-learning/amazon-personalize-launches-new-recipes-supporting-larger-item-catalogs-with-lower-latency/">v2 recipes launch</a> · <a href="https://aws.amazon.com/blogs/machine-learning/drive-hyper-personalized-customer-experiences-with-amazon-personalize-and-generative-ai/">Personalize and generative AI</a> · Other launch posts: <a href="https://aws.amazon.com/blogs/machine-learning/customize-your-recommendations-by-promoting-specific-items-using-business-rules-with-amazon-personalize/">Promotions with business rules</a>.</p></div>
+      </section>
 
-    {{ post.content }}
+      <section id="open-source" aria-labelledby="open-source-title">
+        <h2 id="open-source-title">Open source</h2>
+        <ul>
+          <li><strong>LangChain AWS</strong> — <a href="https://github.com/langchain-ai/langchain-aws/pulls?q=is%3Apr%20(author%3Arishabhagrawal1%20OR%20%22feat(aws)%3A%20credential-derived%20auth%20for%20ChatOpenAIMantle%22%20OR%20%22feat(aws)%3A%20add%20ChatOpenAIMantle%20for%20Bedrock%20Mantle%20OpenAI-compatible%20API%22)">Bedrock chat integrations and AWS credential-based authentication</a>.</li>
+          <li><strong>OpenSearch</strong> — <a href="https://github.com/langchain-ai/langchain/issues/39776">LangChain integration</a> proposal; <a href="https://github.com/opensearch-project/k-NN/issues/1347">product quantization and reranking proposal</a> referenced in the <a href="https://github.com/opensearch-project/k-NN/issues/2386#issuecomment-2605904556">JVector integration</a> discussion.</li>
+        </ul>
+      </section>
+
+      <section id="service" aria-labelledby="service-title">
+        <h2 id="service-title">Professional service</h2>
+        <ul>
+          <li>Area Chair, NeurIPS 2026 workshops (<strong>Verify-Agents</strong>; <strong>Managing Agents that Manage Agents</strong>, Meta-Agents) and EMNLP 2026 workshop (<strong>GroundLM</strong>)</li>
+          <li>Program Committee, <strong>IEEE International Conference on Agentic AI</strong> 2026</li>
+          <li>Program Committee member, ICML 2026 workshops (<strong>CoLoRAI</strong>, <strong>DL4C</strong>); ACL 2026 workshop (<strong>ALVR</strong>); and ICLR 2026 workshops (<strong>SPOT</strong>, <strong>CAO</strong>, <strong>Agentic AI in the Wild</strong>)</li>
+        </ul>
+      </section>
+    </main>
   </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+</body>
+</html>

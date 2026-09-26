@@ -28,10 +28,13 @@
     a:hover { text-decoration: underline; text-underline-offset: 3px; }
     a:focus-visible { outline: 2px solid #245b82; outline-offset: 3px; }
     .page { max-width: 790px; margin: 0 auto; padding: 50px 30px 85px; }
-    header { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; border-bottom: 1px solid #e3e6e8; padding-bottom: 18px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid #e3e6e8; padding-bottom: 18px; }
     .name { color: #24292d; font-size: 20px; line-height: 1.25; font-weight: 700; letter-spacing: -.025em; margin: 0; }
     .name a { color: inherit; }
-    nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; }
+    nav { display: flex; align-items: center; gap: 6px; }
+    .icon-link { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; color: #505d66; border-radius: 6px; }
+    .icon-link:hover { color: #245b82; background: #f1f4f6; }
+    .icon-link svg { display: block; width: 20px; height: 20px; }
     .intro { display: flex; align-items: flex-start; gap: 30px; padding: 41px 0 8px; }
     .intro-copy { flex: 1; min-width: 0; order: 1; }
     .portrait { width: 132px; height: 132px; flex: 0 0 132px; order: 2; object-fit: cover; border-radius: 4px; }
@@ -60,7 +63,7 @@
     @media (max-width: 600px) {
       .page { padding: 27px 22px 60px; }
       header { display: block; }
-      nav { margin-top: 10px; gap: 8px 16px; }
+      nav { margin-top: 10px; margin-left: -8px; }
       .intro { display: block; padding-top: 32px; }
       .portrait { float: right; width: 96px; height: 96px; margin: 2px 0 12px 17px; }
     }
@@ -70,10 +73,11 @@
   <div class="page" id="top">
     <header>
       <h1 class="name"><a href="#top">Rishabh Agrawal</a></h1>
-      <nav aria-label="Profiles">
-        <a href="https://scholar.google.com/citations?user=1It8NHgAAAAJ">Google Scholar</a>
-        <a href="https://www.linkedin.com/in/rishagrawal">LinkedIn</a>
-        <a href="https://github.com/rishabhagrawal1">GitHub</a>
+      <nav aria-label="Profiles and contact">
+        <a class="icon-link" href="https://scholar.google.com/citations?user=1It8NHgAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+        <a class="icon-link" href="https://www.linkedin.com/in/rishagrawal" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.06 2.06 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+        <a class="icon-link" href="https://github.com/rishabhagrawal1" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297a12 12 0 0 0-3.793 23.386c.6.113.82-.26.82-.577v-2.234c-3.338.726-4.043-1.416-4.043-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.304-5.467-1.332-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.323 3.301 1.23a11.533 11.533 0 0 1 6.007 0c2.291-1.553 3.297-1.23 3.297-1.23.655 1.652.243 2.873.12 3.176.77.84 1.235 1.91 1.235 3.221 0 4.61-2.807 5.624-5.479 5.921.43.373.823 1.102.823 2.222v3.293c0 .32.216.694.825.576A12.001 12.001 0 0 0 12 .297z"/></svg></a>
+        <a class="icon-link" id="email-link" href="#top" data-user="hbtirishabh" data-host="gmail" data-tld="com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
       </nav>
     </header>
     <main>
@@ -120,10 +124,14 @@
         <ul>
           <li>Area Chair for NeurIPS 2026 workshops: <strong>Verify-Agents</strong> and <strong>Managing Agents that Manage Agents</strong> (Meta-Agents); EMNLP 2026 workshop: <strong>GroundLM</strong></li>
           <li>Program Committee member, <strong>IEEE International Conference on Agentic AI</strong> 2026</li>
-          <li>Program Committee member, ICML 2026 workshops (<strong>CoLoRAI</strong>, <strong>DL4C</strong>); ACL 2026 workshop (<strong>ALVR</strong>); and ICLR 2026 workshops (<strong>SPOT</strong>, <strong>CAO</strong>, <strong>Agentic AI in the Wild</strong>)</li>
+          <li>Program Committee member, ICML 2026 workshops (<strong>CoLoRAI</strong>, <strong>DL4C</strong>); ACL 2026 workshop (<a href="https://aclanthology.org/2026.alvr-main.pdf#page=6"><strong>ALVR</strong></a>); and ICLR 2026 workshops (<strong>SPOT</strong>, <a href="https://sites.google.com/view/iclr-2026-workshop-cao/"><strong>CAO</strong></a>, <strong>Agentic AI in the Wild</strong>)</li>
         </ul>
       </section>
     </main>
   </div>
+  <script>
+    const emailLink = document.getElementById('email-link');
+    emailLink.href = 'mailto:' + emailLink.dataset.user + '@' + emailLink.dataset.host + '.' + emailLink.dataset.tld;
+  </script>
 </body>
 </html>
